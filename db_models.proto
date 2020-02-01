@@ -14,7 +14,7 @@ message Participant {
     string email = 3;
     string phone_number = 4;
     string pass_code = 5;
-    OptionalPubKey residence = 6;
+    OptionalHash residence = 6;
     uint64 history_len = 7;
     exonum.crypto.Hash history_hash = 8;
 }
@@ -22,7 +22,7 @@ message Participant {
 message Administration {
     exonum.crypto.Hash pub_key = 1;
     string name = 2;
-    OptionalPubKey principal_key = 3;
+    OptionalHash principal_key = 3;
     Polygon area = 4;
     uint32 administration_level = 5;
     uint64 history_len = 6;
