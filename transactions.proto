@@ -11,13 +11,13 @@ message CreateParticipant {
     string name = 1;
     string email = 2;
     string phone_number = 3;
-    OptionalPubKey residence = 4;
+    OptionalHash residence = 4;
     string pass_code = 5;
 }
 
 message CreateAdministration {
     string name = 1;
-    OptionalPubKey principal_key = 2;
+    OptionalHash principal_key = 2;
     Polygon area = 3;
 }
 
