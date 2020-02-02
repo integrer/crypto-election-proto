@@ -36,4 +36,5 @@ message Vote {
 
 message SubmitLocation {
     Coordinate position = 1;
+    google.protobuf.Timestamp date = 2;
 }
