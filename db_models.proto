@@ -3,13 +3,15 @@ syntax = "proto3";
 package crypto_election.core;
 
 import "google/protobuf/timestamp.proto";
+
 import "types.proto";
+
 import "wrappers.proto";
 import "geo.proto";
 
 
 message Participant {
-    exonum.crypto.Hash pub_key = 1;
+    exonum.crypto.Hash addr = 1;
     string name = 2;
     string email = 3;
     string phone_number = 4;
@@ -20,7 +22,7 @@ message Participant {
 }
 
 message Administration {
-    exonum.crypto.Hash pub_key = 1;
+    exonum.crypto.Hash addr = 1;
     string name = 2;
     OptionalHash principal_key = 3;
     Polygon area = 4;
@@ -30,8 +32,8 @@ message Administration {
 }
 
 message Election {
-    int64 id = 1;
-    exonum.crypto.Hash author_key = 2;
+    int64 addr = 1;
+    exonum.crypto.Hash issuer = 2;
     string name = 3;
     bool is_cancelled = 4;
     google.protobuf.Timestamp start_date = 5;

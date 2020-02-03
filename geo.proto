@@ -12,7 +12,7 @@ message LineString {
     repeated Coordinate items = 1;
 }
 
-message Coordinate{
+message Coordinate {
     double x = 1;
     double y = 2;
 }
